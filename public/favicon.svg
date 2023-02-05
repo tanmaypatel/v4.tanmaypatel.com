@@ -1,0 +1,17 @@
+<svg class="tanmay-patel-emblem" width="245" height="270" viewBox="0 0 245 270" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="emblem-cover" d="M245.05 88.65 L245.05 181.85 Q244.75 192.55 239 202.45 233.8 211.55 225.85 217 L142.4 265.35 Q138.4 267.3 133.85 268.55 117.7 272.7 103.05 265.5 L19.25 216.95 Q5.9 207.95 1.6 192.1 0.2 186.75 0.05 181.55 L0.05 88.3 Q0.35 77.6 6.05 67.65 11.5 58.2 20.05 52.65 L101.7 5.45 Q106.15 3.05 111.3 1.65 127.35 -2.65 142 4.6 L224.95 52.6 Q238.95 61.6 243.45 78.15 244.9 83.5 245.05 88.65"/>
+        <path id="logo" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" d="M195.3 199.35 L195.3 155.45 Q194.7 176.25 178.9 187.8 L140.65 213.05 Q124.9 220.2 122.5 205.15 L122.5 159.25 M195.3 114.1 L195.3 155.45 M49.7 161.2 L49.7 119.9 Q50.35 98.3 67.45 86.65 L122.5 54.75 122.5 119.05 M122.45 138.65 L122.45 139.65"/>
+        <mask id="mask-to-see-through-logo">
+            <use xlink:href="#emblem-cover" class="emblem-cover-for-mask" stroke="none" fill="#ffffff" />
+            <use xlink:href="#logo" class="logo-for-mask" fill="none" stroke="#000000" />
+        </mask>
+        <mask id="mask-to-see-only-logo">
+            <use xlink:href="#logo" class="logo-for-mask" fill="none" stroke="#ffffff" />
+        </mask>
+    </defs>
+    <g class="emblem-and-logo-group">
+        <use xlink:href="#emblem-cover" class="emblem-cover" stroke="none" fill="#000000" />
+        <use xlink:href="#logo" class="logo" fill="none" stroke="#ffffff" />
+    </g>
+</svg>
