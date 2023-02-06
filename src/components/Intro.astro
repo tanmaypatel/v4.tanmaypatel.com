@@ -2,34 +2,29 @@
 const { default: logoSVG } = await import(`/src/assets/images/logo.svg?raw`);
 ---
 
-<div class="container--hero lg:text-center">
+<div class="container--hero lg:text-center not-pros">
   <div class="wrapper--hero">
-    <span class="wrapper--logo">
+    <span class="wrapper--logo inline-block w-full lg:w-1/4">
       <Fragment set:html={logoSVG} />
     </span>
-    <h1 class="hero__name">
-      <span class="hero__first-name">Tanmay</span>
-      <span class="hero__family-name">Patel</span>
+    <h1 class="hero__name text-4xl font-black ">
+      <span class="hero__first-name uppercase block">Tanmay</span>
+      <span class="hero__family-name uppercase block">Patel</span>
     </h1>
   </div>
   <p class="wrapper--hero-purpose">
-    <span class="what-hero-does">A Product-minded Web Tech Lead</span>
-    <span class="since-how-long"
+    <span class="what-hero-is block">A Product-minded Web Tech Lead</span>
+    <span class="what-hero-does block"
       >building effective, performant and responsive Web Apps</span
     >
   </p>
 </div>
 
 <style lang="scss">
-  .wrapper--logo {
-    @apply inline-block w-1/2;
-  }
-
   .tanmay-patel-emblem {
-    width: 100%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    height: auto;
 
     use.emblem-cover {
       fill: #2b2b2b;

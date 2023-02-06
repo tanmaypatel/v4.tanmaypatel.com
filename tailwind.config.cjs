@@ -11,6 +11,10 @@ module.exports = {
         serif: ["Roboto Slab", ...defaultTheme.fontFamily.serif],
         mono: ["Source Code Pro", ...defaultTheme.fontFamily.mono],
       },
+      backgroundImage: {
+        "default-background-pattern":
+          "url('assets/images/page-background.png')",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
