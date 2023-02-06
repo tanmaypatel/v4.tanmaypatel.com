@@ -1,0 +1,36 @@
+---
+import "@fontsource/lato";
+import "@fontsource/roboto";
+import "@fontsource/roboto-slab";
+import "@fontsource/source-code-pro";
+
+import BaseHead from "../components/BaseHead.astro";
+import Intro from "../components/Intro.astro";
+import Sidebar from "../components/Sidebar.astro";
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="prose max-w-none">
+    <div class="grid gap-4 lg:grid-cols-12 grid-cols-1">
+      <header class="lg:col-span-3">
+        <div class="lg:sticky lg:top-0">
+          <Intro />
+        </div>
+      </header>
+      <main class="lg:col-span-6">
+        <slot />
+      </main>
+      <aside class="lg:col-span-3">
+        <div class="lg:sticky lg:top-0">
+          <Sidebar />
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
