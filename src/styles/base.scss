@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply box-border;
+  }
+
   h1 {
     @apply text-4xl my-6;
   }
@@ -19,7 +23,11 @@
     @apply text-base text-gray-400 mb-6;
   }
 
-  ul {
+  em {
+    @apply text-sky-400 not-italic;
+  }
+
+  ul.list-emdashed {
     @apply list-none pl-6;
     text-indent: -1.5em;
 

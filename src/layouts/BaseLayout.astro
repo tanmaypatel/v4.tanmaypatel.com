@@ -21,7 +21,7 @@ import "../styles/base.scss";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="max-w-none">
-    <div class="grid gap-4 lg:grid-cols-12 grid-cols-1">
+    <div class="grid lg:grid-cols-12 grid-cols-1">
       <header class="lg:col-span-3">
         <div class="lg:sticky lg:top-0 lg:pt-16">
           <Intro />
@@ -34,8 +34,8 @@ import "../styles/base.scss";
           <slot />
         </div>
       </main>
-      <aside class="lg:col-span-3">
-        <div class="lg:sticky lg:top-0 lg:pt-16">
+      <aside class="lg:col-span-3 px-6">
+        <div class="lg:sticky lg:top-0 lg:pt-24">
           <Sidebar />
         </div>
       </aside>

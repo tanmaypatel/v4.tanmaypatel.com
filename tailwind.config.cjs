@@ -36,6 +36,10 @@ module.exports = {
         twelve: "18rem",
         sixteen: "24rem",
       },
+      listStyleType: {
+        ...defaultTheme.listStyleType,
+        emdashed: "none",
+      },
       backgroundImage: {
         "default-background-pattern":
           "url('assets/images/page-background.png')",
