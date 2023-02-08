@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl my-6;
+  }
+
+  h2 {
+    @apply font-serif text-xl my-6 text-gray-500;
+  }
+
+  h3 {
+    @apply text-md text-pink-500 mt-6;
+  }
+
+  h4 {
+    @apply text-base text-gray-400 mb-6;
+  }
+
+  ul {
+    @apply list-none pl-6;
+    text-indent: -1.5em;
+
+    li {
+      &::before {
+        content: "—";
+        @apply pr-2;
+      }
+    }
+  }
+}

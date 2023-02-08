@@ -7,9 +7,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Lato", ...defaultTheme.fontFamily.sans],
+        sans: ["Roboto", ...defaultTheme.fontFamily.sans],
         serif: ["Roboto Slab", ...defaultTheme.fontFamily.serif],
         mono: ["Source Code Pro", ...defaultTheme.fontFamily.mono],
+        title: ["Lato", "Roboto", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         "4xl": ["3.815rem", "4.5rem"],
