@@ -11,6 +11,8 @@ import Intro from "../components/Intro.astro";
 import Sidebar from "../components/Sidebar.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+import "../styles/base.css";
 ---
 
 <!DOCTYPE html>
@@ -18,7 +20,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="prose max-w-none">
+  <body class="max-w-none">
     <div class="grid gap-4 lg:grid-cols-12 grid-cols-1">
       <header class="lg:col-span-3">
         <div class="lg:sticky lg:top-0 lg:pt-16">
@@ -26,7 +28,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         </div>
       </header>
       <main class="lg:col-span-6">
-        <div class="lg:mt-16">
+        <div
+          class="lg:my-24 px-8 py-4 bg-white shadow-md border-t-2 border-sky-400"
+        >
           <slot />
         </div>
       </main>
