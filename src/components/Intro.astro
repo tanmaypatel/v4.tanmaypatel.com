@@ -3,18 +3,18 @@ const { default: logoSVG } = await import(`/src/assets/images/logo.svg?raw`);
 ---
 
 <div class="container--hero lg:text-center">
-    <div class="wrapper--hero">
-        <span class="wrapper--logo inline-block w-full lg:w-1/4">
+    <div class="wrapper--hero flex lg:block">
+        <span class="wrapper--logo inline-block w-16 lg:w-1/4">
             <Fragment set:html={logoSVG} />
         </span>
-        <h1 class="hero__name text-5xl font-title font-black mt-4">
-            <span class="hero__first-name uppercase block">Tanmay</span>
-            <span class="hero__family-name uppercase block text-gray-300">Patel</span>
+        <h1 class="hero__name font-black font-title text-3xl leading-0 m-0 ml-6 lg:text-5xl lg:mt-4 lg:ml-0">
+            <span class="hero__first-name uppercase lg:block">Tanmay</span>
+            <span class="hero__family-name uppercase hidden lg:block text-gray-300">Patel</span>
         </h1>
     </div>
-    <p class="wrapper--hero-purpose text-sky-500 mt-4 text-lg leading-8 flex flex-col justify-center">
-        <span class="what-hero-is block">A Product-minded Tech Lead</span>
-        <span class="what-hero-does block px-4">building effective, performant and responsive Web Apps</span>
+    <p class="wrapper--hero-purpose hidden lg:block text-sky-500 mt-4 text-lg leading-8 flex flex-col justify-center">
+        <span class="what-hero-is lg:block">A Product-minded Tech Lead</span>
+        <span class="what-hero-does lg:block lg:px-4">building effective, performant and responsive Web Apps</span>
     </p>
 </div>
 

@@ -1,4 +1,7 @@
 ---
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faLinkedinIn, faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
+
 const pathname = new URL(Astro.request.url).pathname;
 ---
 
@@ -38,26 +41,26 @@ const pathname = new URL(Astro.request.url).pathname;
         </a>
     </div>
 
-    <div class="social-connections-wrapper">
+    <div class="social-connections-wrapper mt-6">
         <ul class="social-connections-navigation-bar">
             <li role="presentation">
                 <a href="https://linkedin.com/in/tanmaypatel" class="social-link linkedin" target="_blank">
-                    <i class="fa fa-linkedin"></i>
+                    <FontAwesomeIcon icon={faLinkedinIn} />
                 </a>
             </li>
             <li role="presentation">
                 <a href="https://twitter.com/tanmaypatel" class="social-link twitter" target="_blank">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-            <li role="presentation">
-                <a href="https://facebook.com/tanmay.patel" class="social-link facebook" target="_blank">
-                    <i class="fa fa-facebook-official"></i>
+                    <FontAwesomeIcon icon={faTwitter} />
                 </a>
             </li>
             <li role="presentation">
                 <a href="https://github.com/tanmaypatel" class="social-link github" target="_blank">
-                    <i class="fa fa-github"></i>
+                    <FontAwesomeIcon icon={faGithub} />
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="https://facebook.com/tanmay.patel" class="social-link facebook" target="_blank">
+                    <FontAwesomeIcon icon={faFacebook} />
                 </a>
             </li>
         </ul>
@@ -85,5 +88,29 @@ const pathname = new URL(Astro.request.url).pathname;
     a.download-resume {
         @apply block mt-6 text-center;
         @apply no-underline text-black bg-gray-50 hover:bg-gray-400 hover:text-black hover:no-underline focus:text-black focus:no-underline focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none;
+    }
+
+    .social-connections-wrapper ul {
+        @apply flex justify-center;
+        li {
+            @apply inline-block w-6 m-2;
+        }
+
+        a {
+            @apply inline-block w-full h-full;
+            @apply no-underline text-gray-400 hover:text-gray-500 active:text-gray-600;
+
+            &.linkedin {
+                @apply no-underline text-blue-400 hover:text-blue-500 active:text-blue-600;
+            }
+
+            &.twitter {
+                @apply no-underline text-sky-400 hover:text-sky-500 active:text-sky-600;
+            }
+
+            &.facebook {
+                @apply no-underline text-sky-400 hover:text-sky-500 active:text-sky-600;
+            }
+        }
     }
 </style>
