@@ -6,68 +6,69 @@ const pathname = new URL(Astro.request.url).pathname;
 ---
 
 <Fragment>
-    <div class="action-bar-wrapper">
-        <div class="action-bar">
-            <button class="btn-toggle-aside" type="button" role="button">
+    <div class="wrapper--sidebar">
+        <div class="action-bar text-right px-6 py-6">
+            <button class="btn-toggle-aside rounded border-0 bg-transparent cursor-pointer p-4 lg:hidden hover:bg-gray-400/10 active:bg-gray-400/25" type="button" role="button">
                 <span class="lines"></span>
             </button>
         </div>
-    </div>
 
-    <nav class="navigation-bar-wrapper">
-        <ul class="navigation-bar nav">
-            <li role="presentation">
-                <a href="/" class:list={[pathname === '/' ? 'active' : undefined]}>About Me</a>
-            </li>
-            <li role="presentation">
-                <a href="/career-and-education" class:list={[pathname === '/career-and-education' ? 'active' : undefined]}>Career &amp; Education</a>
-            </li>
-            <li role="presentation">
-                <a href="/meta" class:list={[pathname === '/meta' ? 'active' : undefined]}>Meta!</a>
-            </li>
-            <!-- <li role="presentation">
-        <a
-          href="/contact"
-          class:list={[pathname === "/contact" ? "active" : undefined]}
-          >Contact</a
-        >
-      </li> -->
-        </ul>
-    </nav>
+        <div class="nav-wrapper bg-gray-200/95 lg:bg-transparent px-6 h-screen shadow-inner lg:shadow-none">
+            <nav class="navigation-bar nav">
+                <ul class="navigation">
+                    <li role="presentation">
+                        <a href="/" class:list={[pathname === '/' ? 'active' : undefined]}>About Me</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="/career-and-education" class:list={[pathname === '/career-and-education' ? 'active' : undefined]}>Career &amp; Education</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="/meta" class:list={[pathname === '/meta' ? 'active' : undefined]}>Meta!</a>
+                    </li>
+                </ul>
+            </nav>
 
-    <div class="offer-to-download-resume">
-        <a href="https://www.dropbox.com/s/ng4kiig1qyrz6ct/Tanmay%20Patel%20-%20Tech%20Lead%20-%20Web%20-%20CV.pdf?dl=0" download class="download-resume" target="_blank">
-            <i class="fa fa-download"></i> Download Resume
-        </a>
-    </div>
+            <div class="offer-to-download-resume">
+                <a href="https://www.dropbox.com/s/ng4kiig1qyrz6ct/Tanmay%20Patel%20-%20Tech%20Lead%20-%20Web%20-%20CV.pdf?dl=0" download class="download-resume" target="_blank"> Download Resume</a>
+            </div>
 
-    <div class="social-connections-wrapper mt-6">
-        <ul class="social-connections-navigation-bar">
-            <li role="presentation">
-                <a href="https://linkedin.com/in/tanmaypatel" class="social-link linkedin" target="_blank">
-                    <FontAwesomeIcon icon={faLinkedinIn} />
-                </a>
-            </li>
-            <li role="presentation">
-                <a href="https://twitter.com/tanmaypatel" class="social-link twitter" target="_blank">
-                    <FontAwesomeIcon icon={faTwitter} />
-                </a>
-            </li>
-            <li role="presentation">
-                <a href="https://github.com/tanmaypatel" class="social-link github" target="_blank">
-                    <FontAwesomeIcon icon={faGithub} />
-                </a>
-            </li>
-            <li role="presentation">
-                <a href="https://facebook.com/tanmay.patel" class="social-link facebook" target="_blank">
-                    <FontAwesomeIcon icon={faFacebook} />
-                </a>
-            </li>
-        </ul>
+            <div class="social-connections-wrapper mt-6">
+                <ul class="social-connections-navigation-bar">
+                    <li role="presentation">
+                        <a href="https://linkedin.com/in/tanmaypatel" class="social-link linkedin" target="_blank">
+                            <FontAwesomeIcon icon={faLinkedinIn} />
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="https://twitter.com/tanmaypatel" class="social-link twitter" target="_blank">
+                            <FontAwesomeIcon icon={faTwitter} />
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="https://github.com/tanmaypatel" class="social-link github" target="_blank">
+                            <FontAwesomeIcon icon={faGithub} />
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="https://facebook.com/tanmay.patel" class="social-link facebook" target="_blank">
+                            <FontAwesomeIcon icon={faFacebook} />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </Fragment>
 
 <style lang="scss">
+    .nav-wrapper {
+        @apply hidden lg:block;
+    }
+
+    .navigation--open .nav-wrapper {
+        @apply block;
+    }
+
     nav ul {
         li {
             &:not(:last-child) {
@@ -82,6 +83,53 @@ const pathname = new URL(Astro.request.url).pathname;
             &.active {
                 @apply text-sky-400;
             }
+        }
+    }
+
+    .btn-toggle-aside {
+        @mixin line {
+            @apply inline-block lg:hidden w-6 h-0.5 bg-gray-500 transition-transform;
+        }
+
+        .lines {
+            @include line;
+            @apply relative align-middle -top-px;
+
+            &:before,
+            &:after {
+                content: '';
+                @include line;
+                @apply absolute left-0;
+            }
+
+            &:before {
+                @apply top-2;
+            }
+
+            &:after {
+                @apply -top-2;
+            }
+
+            .navigation--open & {
+                @apply bg-transparent;
+
+                &:before,
+                &:after {
+                    @apply top-0 bg-red-400 origin-center;
+                }
+
+                &:before {
+                    @apply rotate-45;
+                }
+
+                &:after {
+                    @apply -rotate-45;
+                }
+            }
+        }
+
+        &:active {
+            @apply bg-gray-400;
         }
     }
 
@@ -114,3 +162,14 @@ const pathname = new URL(Astro.request.url).pathname;
         }
     }
 </style>
+
+<script>
+    const sidebarWrapper = document.querySelector('.wrapper--sidebar');
+    const navigationToggleButton = document.querySelector('.btn-toggle-aside');
+
+    if (navigationToggleButton) {
+        navigationToggleButton.addEventListener('click', () => {
+            sidebarWrapper?.classList.toggle('navigation--open');
+        });
+    }
+</script>
