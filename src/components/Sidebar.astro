@@ -3,118 +3,87 @@ const pathname = new URL(Astro.request.url).pathname;
 ---
 
 <Fragment>
-  <div class="action-bar-wrapper">
-    <div class="action-bar">
-      <button class="btn-toggle-aside" type="button" role="button">
-        <span class="lines"></span>
-      </button>
+    <div class="action-bar-wrapper">
+        <div class="action-bar">
+            <button class="btn-toggle-aside" type="button" role="button">
+                <span class="lines"></span>
+            </button>
+        </div>
     </div>
-  </div>
 
-  <nav class="navigation-bar-wrapper">
-    <ul class="navigation-bar nav">
-      <li role="presentation">
-        <a href="/" class:list={[pathname === "/" ? "active" : undefined]}
-          >About Me</a
-        >
-      </li>
-      <li role="presentation">
-        <a
-          href="/career-and-education"
-          class:list={[
-            pathname === "/career-and-education" ? "active" : undefined,
-          ]}>Career &amp; Education</a
-        >
-      </li>
-      <li role="presentation">
-        <a
-          href="/meta"
-          class:list={[pathname === "/meta" ? "active" : undefined]}>Meta!</a
-        >
-      </li>
-      <!-- <li role="presentation">
+    <nav class="navigation-bar-wrapper">
+        <ul class="navigation-bar nav">
+            <li role="presentation">
+                <a href="/" class:list={[pathname === '/' ? 'active' : undefined]}>About Me</a>
+            </li>
+            <li role="presentation">
+                <a href="/career-and-education" class:list={[pathname === '/career-and-education' ? 'active' : undefined]}>Career &amp; Education</a>
+            </li>
+            <li role="presentation">
+                <a href="/meta" class:list={[pathname === '/meta' ? 'active' : undefined]}>Meta!</a>
+            </li>
+            <!-- <li role="presentation">
         <a
           href="/contact"
           class:list={[pathname === "/contact" ? "active" : undefined]}
           >Contact</a
         >
       </li> -->
-    </ul>
-  </nav>
+        </ul>
+    </nav>
 
-  <div class="offer-to-download-resume">
-    <a
-      href="https://www.dropbox.com/s/ng4kiig1qyrz6ct/Tanmay%20Patel%20-%20Tech%20Lead%20-%20Web%20-%20CV.pdf?dl=0"
-      download
-      class="download-resume"
-      target="_blank"
-    >
-      <i class="fa fa-download"></i> Download Resume
-    </a>
-  </div>
+    <div class="offer-to-download-resume">
+        <a href="https://www.dropbox.com/s/ng4kiig1qyrz6ct/Tanmay%20Patel%20-%20Tech%20Lead%20-%20Web%20-%20CV.pdf?dl=0" download class="download-resume" target="_blank">
+            <i class="fa fa-download"></i> Download Resume
+        </a>
+    </div>
 
-  <div class="social-connections-wrapper">
-    <ul class="social-connections-navigation-bar">
-      <li role="presentation">
-        <a
-          href="https://linkedin.com/in/tanmaypatel"
-          class="social-link linkedin"
-          target="_blank"
-        >
-          <i class="fa fa-linkedin"></i>
-        </a>
-      </li>
-      <li role="presentation">
-        <a
-          href="https://twitter.com/tanmaypatel"
-          class="social-link twitter"
-          target="_blank"
-        >
-          <i class="fa fa-twitter"></i>
-        </a>
-      </li>
-      <li role="presentation">
-        <a
-          href="https://facebook.com/tanmay.patel"
-          class="social-link facebook"
-          target="_blank"
-        >
-          <i class="fa fa-facebook-official"></i>
-        </a>
-      </li>
-      <li role="presentation">
-        <a
-          href="https://github.com/tanmaypatel"
-          class="social-link github"
-          target="_blank"
-        >
-          <i class="fa fa-github"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
+    <div class="social-connections-wrapper">
+        <ul class="social-connections-navigation-bar">
+            <li role="presentation">
+                <a href="https://linkedin.com/in/tanmaypatel" class="social-link linkedin" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="https://twitter.com/tanmaypatel" class="social-link twitter" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="https://facebook.com/tanmay.patel" class="social-link facebook" target="_blank">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="https://github.com/tanmaypatel" class="social-link github" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
 </Fragment>
 
 <style lang="scss">
-  nav ul {
-    li {
-      &:not(:last-child) {
-        @apply border-b border-dashed border-gray-400;
-      }
+    nav ul {
+        li {
+            &:not(:last-child) {
+                @apply border-b border-dashed border-gray-400;
+            }
+        }
+
+        a {
+            @apply block leading-6 py-3;
+            @apply no-underline text-gray-500 hover:text-sky-400 active:text-sky-500;
+
+            &.active {
+                @apply text-sky-400;
+            }
+        }
     }
 
-    a {
-      @apply block leading-6 py-3;
-      @apply no-underline text-gray-500 hover:text-sky-400 active:text-sky-500;
-
-      &.active {
-        @apply text-sky-400;
-      }
+    a.download-resume {
+        @apply block mt-6 text-center;
+        @apply no-underline text-black bg-gray-50 hover:bg-gray-400 hover:text-black hover:no-underline focus:text-black focus:no-underline focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none;
     }
-  }
-
-  a.download-resume {
-    @apply block mt-6 text-center;
-    @apply no-underline text-black bg-gray-50 hover:bg-gray-400 hover:text-black hover:no-underline focus:text-black focus:no-underline focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none;
-  }
 </style>

@@ -3,47 +3,47 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply box-border;
-  }
-
-  h1 {
-    @apply text-4xl my-6;
-  }
-
-  h2 {
-    @apply font-serif text-xl my-6 text-gray-500;
-  }
-
-  h3 {
-    @apply text-md text-pink-500 mt-6;
-  }
-
-  h4 {
-    @apply text-base text-gray-400 mb-6;
-  }
-
-  p {
-    @apply mb-6;
-  }
-
-  em {
-    @apply text-sky-400 not-italic;
-  }
-
-  a {
-    @apply text-sky-400 underline hover:text-sky-500;
-  }
-
-  ul.list-emdashed {
-    @apply list-none pl-6;
-    text-indent: -1.5em;
-
-    li {
-      &::before {
-        content: "—";
-        @apply pr-2;
-      }
+    * {
+        @apply box-border;
     }
-  }
+
+    h1 {
+        @apply text-4xl my-6;
+    }
+
+    h2 {
+        @apply font-serif text-xl my-6 text-gray-500;
+    }
+
+    h3 {
+        @apply text-md text-pink-500 mt-6;
+    }
+
+    h4 {
+        @apply text-base text-gray-400 mb-6;
+    }
+
+    p {
+        @apply mb-6;
+    }
+
+    em {
+        @apply text-sky-400 not-italic;
+    }
+
+    a {
+        @apply text-sky-400 underline hover:text-sky-500;
+    }
+
+    ul.list-emdashed {
+        @apply list-none pl-6;
+        text-indent: -1.5em;
+
+        li {
+            &::before {
+                content: '—';
+                @apply pr-2;
+            }
+        }
+    }
 }

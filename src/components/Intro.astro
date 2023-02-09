@@ -3,39 +3,35 @@ const { default: logoSVG } = await import(`/src/assets/images/logo.svg?raw`);
 ---
 
 <div class="container--hero lg:text-center">
-  <div class="wrapper--hero">
-    <span class="wrapper--logo inline-block w-full lg:w-1/4">
-      <Fragment set:html={logoSVG} />
-    </span>
-    <h1 class="hero__name text-5xl font-title font-black mt-4">
-      <span class="hero__first-name uppercase block">Tanmay</span>
-      <span class="hero__family-name uppercase block text-gray-300">Patel</span>
-    </h1>
-  </div>
-  <p
-    class="wrapper--hero-purpose text-sky-500 mt-4 text-lg leading-8 flex flex-col justify-center"
-  >
-    <span class="what-hero-is block">A Product-minded Tech Lead</span>
-    <span class="what-hero-does block px-4"
-      >building effective, performant and responsive Web Apps</span
-    >
-  </p>
+    <div class="wrapper--hero">
+        <span class="wrapper--logo inline-block w-full lg:w-1/4">
+            <Fragment set:html={logoSVG} />
+        </span>
+        <h1 class="hero__name text-5xl font-title font-black mt-4">
+            <span class="hero__first-name uppercase block">Tanmay</span>
+            <span class="hero__family-name uppercase block text-gray-300">Patel</span>
+        </h1>
+    </div>
+    <p class="wrapper--hero-purpose text-sky-500 mt-4 text-lg leading-8 flex flex-col justify-center">
+        <span class="what-hero-is block">A Product-minded Tech Lead</span>
+        <span class="what-hero-does block px-4">building effective, performant and responsive Web Apps</span>
+    </p>
 </div>
 
 <style lang="scss">
-  .tanmay-patel-emblem {
-    display: block;
-    width: 100%;
-    height: auto;
+    .tanmay-patel-emblem {
+        display: block;
+        width: 100%;
+        height: auto;
 
-    use.emblem-cover {
-      fill: #2b2b2b;
-    }
+        use.emblem-cover {
+            fill: #2b2b2b;
+        }
 
-    &.masked-to-see-through-logo {
-      use.emblem-cover {
-        mask: url(#mask-to-see-through-logo);
-      }
+        &.masked-to-see-through-logo {
+            use.emblem-cover {
+                mask: url(#mask-to-see-through-logo);
+            }
+        }
     }
-  }
 </style>
