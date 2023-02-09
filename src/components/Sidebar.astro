@@ -32,19 +32,19 @@ const pathname = new URL(Astro.request.url).pathname;
           class:list={[pathname === "/meta" ? "active" : undefined]}>Meta!</a
         >
       </li>
-      <li role="presentation">
+      <!-- <li role="presentation">
         <a
           href="/contact"
           class:list={[pathname === "/contact" ? "active" : undefined]}
           >Contact</a
         >
-      </li>
+      </li> -->
     </ul>
   </nav>
 
   <div class="offer-to-download-resume">
     <a
-      href="https://www.dropbox.com/s/p23xz7ivy5mwbm2/Tanmay%20Patel%20-%20Tech%20Lead%20-%20Web%20Front-end%20-%20CV.pdf"
+      href="https://www.dropbox.com/s/ng4kiig1qyrz6ct/Tanmay%20Patel%20-%20Tech%20Lead%20-%20Web%20-%20CV.pdf?dl=0"
       download
       class="download-resume"
       target="_blank"
@@ -105,7 +105,7 @@ const pathname = new URL(Astro.request.url).pathname;
 
     a {
       @apply block leading-6 py-3;
-      @apply active:text-sky-400;
+      @apply no-underline text-gray-500 hover:text-sky-400 active:text-sky-500;
 
       &.active {
         @apply text-sky-400;
@@ -114,7 +114,7 @@ const pathname = new URL(Astro.request.url).pathname;
   }
 
   a.download-resume {
-    @apply mt-6;
-    @apply block text-center bg-gray-50 hover:bg-gray-400 focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none;
+    @apply block mt-6 text-center;
+    @apply no-underline text-black bg-gray-50 hover:bg-gray-400 hover:text-black hover:no-underline focus:text-black focus:no-underline focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none;
   }
 </style>

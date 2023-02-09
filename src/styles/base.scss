@@ -23,8 +23,16 @@
     @apply text-base text-gray-400 mb-6;
   }
 
+  p {
+    @apply mb-6;
+  }
+
   em {
     @apply text-sky-400 not-italic;
+  }
+
+  a {
+    @apply text-sky-400 underline hover:text-sky-500;
   }
 
   ul.list-emdashed {
