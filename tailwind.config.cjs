@@ -42,7 +42,7 @@ module.exports = {
       },
       backgroundImage: {
         "default-background-pattern":
-          "url('assets/images/page-background.png')",
+          "url('/assets/images/page-background.png')",
       },
     },
   },
