@@ -1,39 +1,39 @@
 {
-  "name": "@example/blog",
-  "type": "module",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "^0.16.0",
-    "@astrojs/react": "^2.0.2",
-    "@astrojs/rss": "^2.1.0",
-    "@astrojs/sitemap": "^1.0.1",
-    "@astrojs/tailwind": "^3.0.1",
-    "@fontsource/lato": "^4.5.10",
-    "@fontsource/roboto": "^4.5.8",
-    "@fontsource/roboto-slab": "^4.5.11",
-    "@fontsource/source-code-pro": "^4.5.14",
-    "@fortawesome/fontawesome-svg-core": "^6.3.0",
-    "@fortawesome/free-brands-svg-icons": "^6.3.0",
-    "@fortawesome/free-solid-svg-icons": "^6.3.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "astro": "^2.0.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
-    "autoprefixer": "^10.4.13",
-    "sass": "^1.58.0",
-    "tailwindcss": "^3.2.4"
-  }
+    "name": "tanmaypatel.com",
+    "type": "module",
+    "version": "4.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/mdx": "^0.16.0",
+        "@astrojs/react": "^2.0.2",
+        "@astrojs/rss": "^2.1.0",
+        "@astrojs/sitemap": "^1.0.1",
+        "@astrojs/tailwind": "^3.0.1",
+        "@fontsource/lato": "^4.5.10",
+        "@fontsource/roboto": "^4.5.8",
+        "@fontsource/roboto-slab": "^4.5.11",
+        "@fontsource/source-code-pro": "^4.5.14",
+        "@fortawesome/fontawesome-svg-core": "^6.3.0",
+        "@fortawesome/free-brands-svg-icons": "^6.3.0",
+        "@fortawesome/free-solid-svg-icons": "^6.3.0",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "@types/react": "^18.0.27",
+        "@types/react-dom": "^18.0.10",
+        "astro": "^2.0.6",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.9",
+        "autoprefixer": "^10.4.13",
+        "sass": "^1.58.0",
+        "tailwindcss": "^3.2.4"
+    }
 }
